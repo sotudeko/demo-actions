@@ -23,8 +23,6 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
-        settings-path: ${{ github.workspace }} # location for the settings.xml file
         
     - name: Cache Maven packages
       uses: actions/cache@v2
@@ -45,7 +43,7 @@ jobs:
         name: Package
         path: staging
         
-    - name: Publish to GitHub Packages Apache Maven
-      run: mvn -Dmaven.test.skip=true deploy -s $GITHUB_WORKSPACE/settings.xml
+    - name: Publish to GitHub Packages
+      run: mvn -B -Dmaven.test.skip=true deploy
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
