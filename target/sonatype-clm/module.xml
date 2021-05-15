@@ -1,0 +1,43 @@
+<module formatVersion="1.0" id="org.demo:demo-actions:jar:1.0" idKind="maven" pathname="/Users/sola/Development/scm/demo-actions">
+  <builderInfo>
+    <property name="clm.tool" value="maven"/>
+    <property name="clm.version" value="2.20.0-01"/>
+  </builderInfo>
+  <consumedArtifacts>
+    <artifact id="com.github.albfernandez:itext2:jar:2.1.8" pathname="/Users/sola/.m2/repository/com/github/albfernandez/itext2/2.1.8/itext2-2.1.8.jar" monitored="true"/>
+    <artifact id="org.bouncycastle:bcprov-jdk15on:jar:1.54" pathname="/Users/sola/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.54/bcprov-jdk15on-1.54.jar" monitored="true"/>
+    <artifact id="org.bouncycastle:bcpkix-jdk15on:jar:1.54" pathname="/Users/sola/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.54/bcpkix-jdk15on-1.54.jar" monitored="true"/>
+    <artifact id="org.bouncycastle:bcmail-jdk15on:jar:1.54" pathname="/Users/sola/.m2/repository/org/bouncycastle/bcmail-jdk15on/1.54/bcmail-jdk15on-1.54.jar" monitored="true"/>
+    <artifact id="com.thoughtworks.xstream:xstream:jar:1.4.5" pathname="/Users/sola/.m2/repository/com/thoughtworks/xstream/xstream/1.4.5/xstream-1.4.5.jar" monitored="true"/>
+    <artifact id="xmlpull:xmlpull:jar:1.1.3.1" pathname="/Users/sola/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar" monitored="true"/>
+    <artifact id="xpp3:xpp3_min:jar:1.1.4c" pathname="/Users/sola/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar" monitored="true"/>
+    <artifact id="ch.qos.logback:logback-classic:jar:1.0.3" pathname="/Users/sola/.m2/repository/ch/qos/logback/logback-classic/1.0.3/logback-classic-1.0.3.jar" monitored="true"/>
+    <artifact id="ch.qos.logback:logback-core:jar:1.0.3" pathname="/Users/sola/.m2/repository/ch/qos/logback/logback-core/1.0.3/logback-core-1.0.3.jar" monitored="true"/>
+    <artifact id="org.slf4j:slf4j-api:jar:1.6.4" pathname="/Users/sola/.m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar" monitored="true"/>
+  </consumedArtifacts>
+  <producedArtifacts>
+    <artifact id="org.demo:demo-actions:jar:1.0" pathname="/Users/sola/Development/scm/demo-actions/target/demo-actions-1.0.jar"/>
+  </producedArtifacts>
+  <dependencies>
+    <dependency id="com.github.albfernandez:itext2:jar:2.1.8" pathname="/Users/sola/.m2/repository/com/github/albfernandez/itext2/2.1.8/itext2-2.1.8.jar" direct="true">
+      <dependency id="org.bouncycastle:bcprov-jdk15on:jar:1.54"/>
+      <dependency id="org.bouncycastle:bcpkix-jdk15on:jar:1.54"/>
+      <dependency id="org.bouncycastle:bcmail-jdk15on:jar:1.54"/>
+    </dependency>
+    <dependency id="org.bouncycastle:bcprov-jdk15on:jar:1.54" pathname="/Users/sola/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.54/bcprov-jdk15on-1.54.jar"/>
+    <dependency id="org.bouncycastle:bcpkix-jdk15on:jar:1.54" pathname="/Users/sola/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.54/bcpkix-jdk15on-1.54.jar"/>
+    <dependency id="org.bouncycastle:bcmail-jdk15on:jar:1.54" pathname="/Users/sola/.m2/repository/org/bouncycastle/bcmail-jdk15on/1.54/bcmail-jdk15on-1.54.jar"/>
+    <dependency id="com.thoughtworks.xstream:xstream:jar:1.4.5" pathname="/Users/sola/.m2/repository/com/thoughtworks/xstream/xstream/1.4.5/xstream-1.4.5.jar" direct="true">
+      <dependency id="xmlpull:xmlpull:jar:1.1.3.1"/>
+      <dependency id="xpp3:xpp3_min:jar:1.1.4c"/>
+    </dependency>
+    <dependency id="xmlpull:xmlpull:jar:1.1.3.1" pathname="/Users/sola/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar"/>
+    <dependency id="xpp3:xpp3_min:jar:1.1.4c" pathname="/Users/sola/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar"/>
+    <dependency id="ch.qos.logback:logback-classic:jar:1.0.3" pathname="/Users/sola/.m2/repository/ch/qos/logback/logback-classic/1.0.3/logback-classic-1.0.3.jar" direct="true">
+      <dependency id="ch.qos.logback:logback-core:jar:1.0.3"/>
+      <dependency id="org.slf4j:slf4j-api:jar:1.6.4"/>
+    </dependency>
+    <dependency id="ch.qos.logback:logback-core:jar:1.0.3" pathname="/Users/sola/.m2/repository/ch/qos/logback/logback-core/1.0.3/logback-core-1.0.3.jar"/>
+    <dependency id="org.slf4j:slf4j-api:jar:1.6.4" pathname="/Users/sola/.m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar"/>
+  </dependencies>
+</module>

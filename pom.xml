@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.demo</groupId>
+    <artifactId>demo-actions</artifactId>
+    <version>1.0</version>
+         
+    <properties>
+         <maven.compiler.target>1.8</maven.compiler.target>
+         <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+
+    <build>
+      <plugins>
+        <plugin>
+          <groupId>com.sonatype.clm</groupId>
+          <artifactId>clm-maven-plugin</artifactId>
+          <executions>
+            <execution>
+              <goals>
+                <goal>index</goal>
+                <goal>attach</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+      <pluginManagement>
+        <plugins>
+          <plugin>
+            <groupId>com.sonatype.clm</groupId>
+            <artifactId>clm-maven-plugin</artifactId>
+            <configuration>
+              <serverUrl>http://localhost:8070</serverUrl>
+              <applicationId>demo-actions-mvn</applicationId>
+              <stage>build</stage>
+              <username>admin</username>
+	      <password>admin123</password>
+            </configuration>
+          </plugin>
+        </plugins>
+      </pluginManagement>
+    </build>
+
+    <dependencies>
+
+<dependency>
+    <groupId>com.github.albfernandez</groupId>
+    <artifactId>itext2</artifactId>
+    <version>2.1.8</version>
+</dependency>
+
+
+      <dependency>
+        <groupId>com.thoughtworks.xstream</groupId>
+        <artifactId>xstream</artifactId>
+        <version>1.4.5</version>
+      </dependency>
+
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.0.3</version>
+      </dependency>
+
+    </dependencies>
+
+</project>
