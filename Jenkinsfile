@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script{
                         nexusPolicyEvaluation failBuildOnNetworkError: true, 
-                                              iqApplication: selectedApplication('producer-ci'), 
+                                              iqApplication: selectedApplication('demo-actions-jk'), 
                                               iqScanPatterns: [[scanPattern: '**/*.war']], 
                                               iqStage: "${iqStage}", 
                                               jobCredentialsId: "${jobCredentialsId}"
