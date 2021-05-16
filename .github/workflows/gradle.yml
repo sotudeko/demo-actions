@@ -21,7 +21,18 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
+        
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      
     - name: Build with Gradle
       run: ./gradlew build
+      
+    - name: Upload artifact to staging
+      run: mkdir staging && cp build/libs/*.jar staging
+      
+    - name: Publish package
+      uses: actions/upload-artifact@v2
+      with:
+        name: Package
+        path: staging
