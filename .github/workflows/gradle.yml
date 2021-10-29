@@ -36,6 +36,9 @@ jobs:
       
     - name: Build with Gradle
       run: ./gradlew clean build
+
+    # - name: version
+    #   run: echo "::set-output name=version::$()"
       
     - name: Upload artifact to staging
       run: mkdir staging && cp build/libs/*.jar staging
@@ -57,8 +60,8 @@ jobs:
       with:
         draft: false
         prerelease: false
-        release_name: ${{ steps.version.outputs.version }}
+        # release_name: ${{ steps.version.outputs.version }}
         tag_name: ${{ github.ref }}
-        body_path: CHANGELOG.md
+        # body_path: CHANGELOG.md
       env:
         GITHUB_TOKEN: ${{ github.token }}
