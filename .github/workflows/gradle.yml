@@ -4,9 +4,9 @@
 name: Java CI with Gradle
 
 on:
-  release:
-    types:
-      - created
+  push:
+    tags:
+      - '*'
 
 jobs:
   build:
@@ -35,7 +35,7 @@ jobs:
       run: chmod +x gradlew
       
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew clean build
       
     - name: Upload artifact to staging
       run: mkdir staging && cp build/libs/*.jar staging
@@ -43,10 +43,22 @@ jobs:
     - name: Publish package
       uses: actions/upload-artifact@v2
       with:
-        name: Package
+        name: demo-action
         path: staging
 
     - name: Publish package to Github packages
       run: gradle publish
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: release
+      uses: actions/create-release@v1
+      id: create_release
+      with:
+        draft: false
+        prerelease: false
+        release_name: ${{ steps.version.outputs.version }}
+        tag_name: ${{ github.ref }}
+        body_path: CHANGELOG.md
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
