@@ -25,6 +25,12 @@ version = '1.1'
 description = 'demo-actions'
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
+task bundle(type: Zip) {
+	from 'build/libs'
+	archiveName "demo-action.zip"
+	destinationDir(file(projectDir))
+}
+
 publishing {
     publications {
         maven(MavenPublication) {
@@ -32,3 +38,4 @@ publishing {
         }
     }
 }
+
