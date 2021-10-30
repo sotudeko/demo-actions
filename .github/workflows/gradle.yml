@@ -43,14 +43,14 @@ jobs:
     # - name: version
     #   run: echo "::set-output name=version::$()"
       
-    - name: Upload artifact to staging
+    - name: Move artifact(s) to staging area
       run: mkdir staging && cp build/libs/*.jar staging
       
-#     - name: Publish package
-#       uses: actions/upload-artifact@v2
-#       with:
-#         name: demo-action
-#         path: staging
+    - name: Upload package
+      uses: actions/upload-artifact@v2
+      with:
+        name: demo-action
+        path: staging
 
 #     - name: Publish package to Github packages
 #       run: gradle publish
