@@ -5,8 +5,8 @@ name: Java CI with Gradle
 
 on:
   push:
-    tags:
-      - '*'
+   branches:
+     - master
 
 jobs:
   build:
@@ -43,19 +43,19 @@ jobs:
     # - name: version
     #   run: echo "::set-output name=version::$()"
       
-    - name: Upload artifact to staging
-      run: mkdir staging && cp build/libs/*.jar staging
+#     - name: Upload artifact to staging
+#       run: mkdir staging && cp build/libs/*.jar staging
       
-    - name: Publish package
-      uses: actions/upload-artifact@v2
-      with:
-        name: demo-action
-        path: staging
+#     - name: Publish package
+#       uses: actions/upload-artifact@v2
+#       with:
+#         name: demo-action
+#         path: staging
 
-    - name: Publish package to Github packages
-      run: gradle publish
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#     - name: Publish package to Github packages
+#       run: gradle publish
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # - name: release
     #   uses: actions/create-release@v1
